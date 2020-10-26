@@ -1,0 +1,28 @@
+{
+  "name": "tweetslistener",
+  "version": "0.0.0",
+  "description": "Backend project that looks to listen some keywords in the tweets from the Twitter API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WS-Jedp/tweetsListener.git"
+  },
+  "keywords": [
+    "Node",
+    "Mocha",
+    "Test",
+    "Twitter",
+    "Tweets",
+    "GraphQL",
+    "Backend"
+  ],
+  "author": "Juan Esteban Deosa Pertuz <jedp082@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WS-Jedp/tweetsListener/issues"
+  },
+  "homepage": "https://github.com/WS-Jedp/tweetsListener#readme"
+}
