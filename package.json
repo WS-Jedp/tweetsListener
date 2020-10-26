@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/WS-Jedp/tweetsListener/issues"
   },
-  "homepage": "https://github.com/WS-Jedp/tweetsListener#readme"
+  "homepage": "https://github.com/WS-Jedp/tweetsListener#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
 }
