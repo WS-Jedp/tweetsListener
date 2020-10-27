@@ -1,13 +1,14 @@
 const axios = require('axios')
 const config = require('../config/config')
 
-const axiosRequest = (type, body) => {
+const axiosRequest = (type, body, endpoint) => {
 	return axios({
-		header: {
+		// baseUrl: config.ENDPOINT,
+		headers: {
 			'Content-Type': 'Application/json',
-			'Authorization': `Bearer ${config.BEARER_TOKEN}`
+			'Authorization': `Bearer ${process.env.TOKEN}`
 		},
-		url: config.ENDPOINT,
+		url: endpoint,
 		method: type,
 		data: body,
 		responseType: 'json'
