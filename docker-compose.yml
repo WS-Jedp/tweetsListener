@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  tweets: 
+    build: .
+    ports: [3000:3000]
+    depends_on: 
+      - rabbitmq
+      - redisdb
+    volumes:
+      - .:/usr/src
+      - /usr/src/node_modules
+  
+  rabbitmq:
+    image: rabbitmq:management
+    ports: [ 5672:5672, 8081:15672 ]
+    depends_on: 
+      - redisdb
+
+  redisdb:
+    image: redis
+    ports: [6379:6379]
