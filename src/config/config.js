@@ -9,6 +9,7 @@ const config = {
 	ENDPOINT_GET_TWEETS: 'https://api.twitter.com/2/tweets/search/stream',
 	ENDPOINT_RULES: 'https://api.twitter.com/2/tweets/search/stream/rules',
 	RABBITMQ_HOST: process.env.RABBITMQ_HOST,
+	REDIS_HOST: process.env.REDIS_HOST,
 	QUEUE_NAME: 'Tweets'
 }
 
