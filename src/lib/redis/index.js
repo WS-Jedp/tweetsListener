@@ -39,7 +39,7 @@ class RedisClient {
     return response
   }
 
-  getList() {
+  getList(res) {
     this.connect()
     const response = this.client.lrange(this.key,0,-1, (err, reply) => {
       if(err){
@@ -47,9 +47,8 @@ class RedisClient {
         return err
       }
 
-      return reply
+      res.json(reply)
     })
-    return response
   }
 
   setItem(item) {

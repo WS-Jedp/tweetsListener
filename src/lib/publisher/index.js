@@ -16,12 +16,12 @@ const publisher = async (tweet) => {
     
    return {
       error: false,
-      message: `Tweet ${tweet} was send to the queue ${QUEUE_NAME}`,
+      message: `Tweet ${tweet.id} was send to the queue ${QUEUE_NAME}`,
    }
   } else {
     connection.close()
     return {
-      error: `Tweet ${tweet} wasn't send to the queue ${QUEUE_NAME}, something failed`,
+      error: `Tweet ${tweet.id} wasn't send to the queue ${QUEUE_NAME}, something failed`,
     }
     process.exit(0)
   }

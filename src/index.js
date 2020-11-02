@@ -13,6 +13,7 @@ const { tweetsConsumer } = require('./middlewares/tweetsConsumer')
 
 // Middlewares
 app.use(tweetsConsumer)
+app.use(express.json())
 
 // Routes
 AppRouter(app)

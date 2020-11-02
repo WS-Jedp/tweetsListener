@@ -7,10 +7,7 @@ const ApiRouter = (app) => {
 
   router.get('/api/tweets', async (req, res, next) => {
     const redis = new RedisClient('Tweets')
-    const tweets = await redis.getList()
-    console.log(tweets, "TWEETS")
-    
-    res.send(tweets)
+    redis.getList(res)
   })
 }
 
