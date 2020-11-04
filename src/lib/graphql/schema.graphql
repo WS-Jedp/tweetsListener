@@ -1,0 +1,39 @@
+type Tweet {
+  id: String
+  author_id: String
+  created_at: String
+  text: String
+}
+
+type Rule {
+  id: String
+  value: String
+  tag: String
+}
+
+input RuleInput {
+  value: String
+  tag: String
+}
+input inputDeleteRule {
+  id: [String]
+}
+
+type Query {
+  "Return the tweets that are saved in Redis"
+  getTweets: [Tweet]
+  
+  "Return the rules that have our stream"
+  getRules: [Rule]
+
+  "Return just one Tweet that is saved is Redis"
+  getTweet(id: String!): Tweet
+}
+
+type Mutation {
+  "Create a rule"
+  createRule(input: RuleInput): Rule
+
+  "Delete a rule"
+  deleteRule(input: inputDeleteRule): [Rule]
+}
