@@ -11,9 +11,10 @@ const TweetsRouter = (app) => {
 	router.get('/tweets', async (req, res, next) => {
 		const tokenData = await setToken()
 		const tweets = await getTweets()
-		// const lastTweet = tweets[tweets.length - 1]
 
-		// const data = await publisher(tweets[tweets.length - 1])
+		// This only works with the mock
+		const lastTweet = tweets[tweets.length - 1]
+		const data = await publisher(tweets[tweets.length - 1])
 
 		data.error ? res.send(data.error) : res.send(data.message)
 	})
