@@ -13,7 +13,14 @@ const postStreamRules = async function(body) {
   return resp
 }
 
+const deleteStreamRules = async function(body) {
+  const data = await postFetchRequest(body, ENDPOINT_RULES)
+  const resp = await data.json()
+  return resp
+}
+
 module.exports = {
   getStreamsRules,
-  postStreamRules
+  postStreamRules,
+  deleteStreamRules
 }
