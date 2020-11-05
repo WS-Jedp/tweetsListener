@@ -10,6 +10,20 @@ type Rule {
   value: String
   tag: String
 }
+type DeleteRuleResp {
+  sent: String 
+}
+
+type UserTweet {
+  id: String
+  name: String
+  username: String
+}
+type Matching_Rules {
+  id: String
+  tag: String
+}
+
 
 input RuleInput {
   value: String
@@ -32,8 +46,8 @@ type Query {
 
 type Mutation {
   "Create a rule"
-  createRule(input: RuleInput): Rule
+  createRule(input: RuleInput): [Rule]
 
   "Delete a rule"
-  deleteRule(input: inputDeleteRule): [Rule]
+  deleteRule(ids: [String]): DeleteRuleResp
 }

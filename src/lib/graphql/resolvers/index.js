@@ -18,7 +18,7 @@ const Resolvers = {
    Mutation: {
      createRule: async (root, { input }) => {
         const redis = new RedisClient('Tweets')
-        const body = setStreamRules()
+        const body = setStreamRules(input.value, input.tag)
         const resp = await postStreamRules(body)
         return resp.data
      },
@@ -26,7 +26,7 @@ const Resolvers = {
        const redis = new RedisClient('Tweets')
        const body = setRulesToDelete(ids)
        const resp = await postStreamRules(body)
-       return resp.data
+       return resp.meta
      }
    }
 }

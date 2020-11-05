@@ -1,15 +1,19 @@
-const { fetchRequest } = require('../../utils/fetchRequests')
+const util = require('util')
+const fs = require('fs')
+const streamPipeline  = util.promisify(require('stream').pipeline)
+
+const { fetchRequest, fetchStreamRequest } = require('../../utils/fetchRequests')
 const { ENDPOINT_GET_TWEETS } = require('../../config/config')
 const MockTweets = require('../../mocks/MocksTweets')
 
 const getTweets = async () => {
-  // const data = await fetchRequest(ENDPOINT_GET_TWEETS)
-  // const resp = await data.json()
-
+  const data = await fetchStreamRequest(ENDPOINT_GET_TWEETS)
+  const resp = await data.text()
+  
   // MOCKS
-  const data = await MockTweets
-  const resp = data.data
-  return resp;
+  const Mocks = await MockTweets
+  const res = Mocks.data
+  return res
 }
 
 module.exports = {
