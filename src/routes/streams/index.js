@@ -9,13 +9,13 @@ const StreamsRouter = (app) => {
 	const router = express.Router()
 	app.use(router)
 
-	router.get('/streams/new/rules', async (req, res, next) => {
+	router.post('/streams/new/rules', async (req, res, next) => {
 
     const tokenData = setToken()
-    
+		const { rules, description } = req.body
 		// Add rules to the tweets stream
-    const rules = streamRules()
-		const stream = await postStreamRules(rules)
+    const body = streamRules(rules, description)
+		const stream = await postStreamRules(body)
 		res.send(stream)
 	})
 	

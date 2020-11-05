@@ -39,6 +39,7 @@ class RedisClient {
     return response
   }
 
+  // Retun view
   getList(res) {
     this.connect()
     const response = this.client.lrange(this.key,0,-1, (err, reply) => {

@@ -1,8 +1,8 @@
-module.exports = function () {
+module.exports = function (rules, description = '') {
 
   return {
     add: [
-      { value: 'node OR platzi OR opensource', tag: 'About backend in Platzi'}
+      { value: rules, tag: description}
     ]
   }
 }

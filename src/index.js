@@ -7,6 +7,7 @@ const StreamsRouter = require('./routes/streams')
 const AppRouter = require('./routes/app')
 
 const ApiRouter = require('./routes/api/tweets')
+const GraphqlTweets = require('./routes/api/graphqlTweets')
 
 const { tweetsConsumer } = require('./middlewares/tweetsConsumer')
 
@@ -22,6 +23,7 @@ StreamsRouter(app)
 
 // Api
 ApiRouter(app)
+GraphqlTweets(app)
 
 app.listen(PORT, () => {
 	console.log(`The server is running in the port https://localhost:${PORT}`)
