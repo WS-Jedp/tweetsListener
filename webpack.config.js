@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/views/index.jsx',
   output: {
     path: path.resolve(__dirname, 'public', 'pages'),
-    filename: 'app.bundle.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[id].chunk.js',
     publicPath: '/'
   },
   devServer: {
