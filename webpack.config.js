@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const { getPages } = require('./webpack/getPages')
 
 module.exports = {
   mode: 'development',
-  entry: './src/views/index.jsx',
+  entry: getPages(__dirname, 'src/views/src/pages'),
   output: {
     path: path.resolve(__dirname, 'public', 'pages'),
     filename: '[name].bundle.js',
