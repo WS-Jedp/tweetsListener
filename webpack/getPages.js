@@ -5,7 +5,7 @@ const DIR = '../src/views/src/pages'
 
 function getPages(dirname, dir) {
   let inputs = {}
-  const directories = fs.readdirSync(path.resolve(join(dirname, dir)))
+  const directories = fs.readdirSync(path.resolve(dirname, dir))
   
   const isFile = new RegExp(/\.[jsx|js]$/) 
   const isPage = new RegExp(/\.jsx$/)

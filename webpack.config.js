@@ -1,14 +1,21 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const { getPages } = require('./webpack/getPages')
+
+const { ENV } = require('./src/config/config')
+const entry = [path.resolve(__dirname, 'src/views/index.jsx')]
+const isDevEnv = (ENV === 'development')
+
+if(isDevEnv) {
+  entry.push('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true')
+}
 
 module.exports = {
-  mode: 'development',
-  entry: getPages(__dirname, 'src/views/src/pages'),
+  mode: ENV,
+  entry,
   output: {
-    path: path.resolve(__dirname, 'public', 'pages'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[id].chunk.js',
+    path: path.resolve(__dirname, 'public'),
+    filename: 'assets/app.bundle.js',
+    chunkFilename: 'assets/[id].chunk.js',
     publicPath: '/'
   },
   devServer: {

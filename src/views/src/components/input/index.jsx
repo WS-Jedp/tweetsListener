@@ -1,7 +1,7 @@
 import React from 'react'
 import { InputWrapper } from './styles'
 
-import { useInput } from '@hooks/useInput'
+import { useInput } from '../../hooks/useInput'
 
 export const Input = ({title, description, setState, placeholder}) => {
 

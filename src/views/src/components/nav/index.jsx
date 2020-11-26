@@ -13,7 +13,7 @@ export const Nav = ({row}) => (
         <Link to='/tweets'>Tweets</Link>
       </li>
       <li>
-        <Link to='/rules'>API Rest</Link>
+        <Link to='/backend/tweets'>API Rest</Link>
       </li>
       <li>
         <Link to='/rules'>GraphQl</Link>
