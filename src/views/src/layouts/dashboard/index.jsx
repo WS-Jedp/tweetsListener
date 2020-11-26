@@ -1,7 +1,7 @@
 import React from 'react'
 import { DashboardWrapper } from './styles'
 
-import { Menu } from '@containers/menu'
+import { Menu } from '../../containers/menu'
 
 
 export const Dashboard = ({children, title, description}) => (

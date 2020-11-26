@@ -8,7 +8,7 @@ const TweetsRouter = (app) => {
 	const router = express.Router()
 	app.use(router)
 
-	router.get('/tweets', async (req, res, next) => {
+	router.get('/backend/tweets', async (req, res, next) => {
 		const tokenData = await setToken()
 		const tweets = await getTweets()
 

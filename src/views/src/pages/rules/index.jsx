@@ -1,13 +1,13 @@
 import React from 'react'
 import { RulesWrapper, FormInputs } from './styles'
 
-import { Dashboard } from '@layouts/dashboard'
+import { Dashboard } from '../../layouts/dashboard'
 
-import { Content } from '@containers/content'
+import { Content } from '../../containers/content'
 
-import { Rule } from '@components/rule'
-import { Input } from '@components/input'
-import { Content as ContentComponent} from '@components/content'
+import { Rule } from '../../components/rule'
+import { Input } from '../../components/input'
+import { Content as ContentComponent} from '../../components/content'
 
 export const Rules = () => {
   return (

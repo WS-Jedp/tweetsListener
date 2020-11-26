@@ -3,9 +3,9 @@ import { Link } from '@reach/router'
 
 import { HomeWrapper } from './styles'
 
-import { Header } from '@components/header'
-import { Nav } from '@components/nav'
-import { Footer } from '@components/footer'
+import { Header } from '../../components/header'
+import { Nav } from '../../components/nav'
+import { Footer } from '../../components/footer'
 
 export const Home = () => {
   return (

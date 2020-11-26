@@ -1,12 +1,12 @@
 import React from 'react'
 import { TweetsWrapper } from './styles'
 
-import { Dashboard } from '@layouts/dashboard'
+import { Dashboard } from '../../layouts/dashboard'
 
-import { Content } from '@containers/content'
+import { Content } from '../../containers/content'
 
-import { Tweet } from '@components/tweet'
-import { Content as ContentComponent } from '@components/content'
+import { Tweet } from '../../components/tweet'
+import { Content as ContentComponent } from '../../components/content'
 
 export const Tweets = () => {
 
